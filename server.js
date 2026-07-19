@@ -78,7 +78,7 @@ app.post(
 );
 
 app.use(express.json());
-app.use(express.static('dirname'));
+app.use(express.static(__dirname));
 
 // ---- Create a Checkout Session when the customer clicks "Buy Now"
 app.post('/create-checkout-session', async (req, res) => {
