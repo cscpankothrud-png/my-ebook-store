@@ -133,7 +133,7 @@ app.get('/download/:token', (req, res) => {
   }
 
   entry.used = true; // one-time use
-  const filePath = path.join(__dirname, entry.file);
+  const filePath = path.join(__dirname,entry.file);
 
   if (!fs.existsSync(filePath)) {
     return res.status(500).send('File missing on server.');
