@@ -77,6 +77,75 @@
     margin: 0 auto 32px;
   }
 
+  /* --- book mockup --- */
+  .book-mockup{
+    perspective: 900px;
+    margin: 8px auto 30px;
+    width: 200px;
+    height: 280px;
+  }
+  .book-cover{
+    position: relative;
+    width: 200px;
+    height: 280px;
+    background: linear-gradient(150deg, #16233C 0%, #0B1220 100%);
+    border: 1px solid var(--gold);
+    border-radius: 3px 12px 12px 3px;
+    transform: rotateY(-20deg) rotateX(1deg);
+    transform-style: preserve-3d;
+    box-shadow:
+      28px 26px 46px rgba(0,0,0,0.55),
+      inset -8px 0 14px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 22px 16px;
+    text-align: center;
+  }
+  .book-cover::after{
+    content:'';
+    position: absolute;
+    right: -9px;
+    top: 5px;
+    bottom: 5px;
+    width: 9px;
+    border-radius: 0 3px 3px 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      #EDE6D2 0px, #EDE6D2 1.5px,
+      #D9CEA9 1.5px, #D9CEA9 3px
+    );
+    transform: rotateY(35deg);
+    transform-origin: left;
+  }
+  .book-crest{
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--gold);
+  }
+  .book-crest svg{ width:16px; height:16px; }
+  .book-title{
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1.35;
+  }
+  .book-rule{
+    display:block;
+    width: 34px;
+    height: 1px;
+    background: var(--line);
+  }
+  .book-sub{
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+
   .price-row{
     display:flex;
     align-items:baseline;
@@ -220,6 +289,17 @@
       <h1 class="serif">शासकीय योजना<br>माहिती पुस्तिका</h1>
       <p class="tagline">शासनाच्या सर्व योजनेची माहिती एका ठिकाणी — पात्रता, कागदपत्रे आणि अर्ज प्रक्रिया सोप्या भाषेत.</p>
 
+      <div class="book-mockup">
+        <div class="book-cover">
+          <span class="book-crest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+          </span>
+          <p class="book-title serif">शासकीय योजना<br>माहिती<br>पुस्तिका</p>
+          <span class="book-rule"></span>
+          <p class="book-sub">100+ योजनांचे संकलन</p>
+        </div>
+      </div>
+
       <div class="price-row">
         <span class="price serif">₹199</span>
         <span class="price-sub">एकदाच पैसे, आयुष्यभर वापर</span>
@@ -356,10 +436,3 @@
 
 </body>
 </html>
-
-
-  
-
-
-
-
